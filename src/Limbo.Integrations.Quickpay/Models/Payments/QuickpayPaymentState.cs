@@ -1,4 +1,6 @@
-﻿namespace Limbo.Integrations.Quickpay.Models.Payments {
+﻿#pragma warning disable CS1591
+
+namespace Limbo.Integrations.Quickpay.Models.Payments {
 
     /// <summary>
     /// Enum class indicating the state of a Quickpay payment.

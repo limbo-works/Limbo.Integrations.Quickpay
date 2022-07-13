@@ -54,6 +54,11 @@ namespace Limbo.Integrations.Quickpay.Models.Payments {
         public QuickpayPaymentState State { get; }
 
         /// <summary>
+        /// Gets meta data about the payment.
+        /// </summary>
+        public QuickpayPaymentMetadata Metadata { get; }
+
+        /// <summary>
         /// Gets the payment link.
         /// </summary>
         public QuickpayPaymentLink Link { get; }
@@ -99,6 +104,7 @@ namespace Limbo.Integrations.Quickpay.Models.Payments {
             TextOnStatement = json.GetString("text_on_statement");
             Currency = json.GetString("currency");
             State = json.GetEnum<QuickpayPaymentState>("state");
+            Metadata = json.GetObject("metadata", QuickpayPaymentMetadata.Parse);
             Link = json.GetObject("link", QuickpayPaymentLink.Parse);
             Basket = json.GetArrayItems("basket", QuickpayBasketItem.Parse);
             TestMode = json.GetBoolean("test_mode");

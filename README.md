@@ -17,9 +17,17 @@
 
 ## Installation
 
-### NuGet
+Install via [**NuGet**](https://www.nuget.org/packages/Limbo.Integrations.Quickpay/1.0.0-alpha002) - either via the .NET CLI:
 
-*Coming soon 😉*
+```
+dotnet add package Limbo.Integrations.Quickpay --version 1.0.0-alpha002
+```
+
+or the NuGet package manager:
+
+```
+Install-Package Limbo.Integrations.Quickpay -Version 1.0.0-alpha002
+```
 
 <br /><br />
 
